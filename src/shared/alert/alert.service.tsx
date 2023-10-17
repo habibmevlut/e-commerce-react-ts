@@ -18,6 +18,22 @@ class AlertService {
         );
     }
 
+    showSuccess(message: string) {
+        const toastProps = {
+            variant: 'success',
+            autohide: true,
+            delay: 5000
+        };
+
+        return (
+            <Toast {...toastProps}>
+                <Toast.Header closeButton={false}>
+                    <strong className="mr-auto">Success</strong>
+                </Toast.Header>
+                <Toast.Body>{message}</Toast.Body>
+            </Toast>
+        );
+    }
 
     showHttpError(httpErrorResponse: any) {
         switch (httpErrorResponse.status) {

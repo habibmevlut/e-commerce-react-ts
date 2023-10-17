@@ -7,8 +7,10 @@ import { IProduct } from '../shared/model/product.model.ts';
 import { AppPagination } from '../components/Pagination.tsx';
 import { ITEMS_PER_PAGE } from '../app.constants.ts';
 import LoadingSpinner from '../components/LoadingSpinner.tsx';
+import AlertService from '../shared/alert/alert.service.tsx';
 
 const productService = new ProductService(new ApplicationConfigService())
+const alertService = new AlertService();
 export default function Store() {
     const [products, setProducts] = useState<IProduct[]>([]);
     const [isFetching, setIsFetching] = useState<boolean>(false);
@@ -17,7 +19,6 @@ export default function Store() {
     const [itemsPerPage] = useState<number>(ITEMS_PER_PAGE);
 
     const handlePageChange = (newPage: any) => {
-        debugger;
         setCurrentPage(newPage);
         fetchData();
     };
@@ -34,7 +35,6 @@ export default function Store() {
                     const updatedProducts = res.products.map((product: IProduct) => ({
                         ...product,
                         isEditingPrice: false,
-                        addedToCart: false,
                     }));
                     setProducts(updatedProducts);
                     setTotalItems(res.count);
@@ -43,9 +43,9 @@ export default function Store() {
                     setProducts([]);
                 }
             })
-            .catch(() => {
+            .catch((err) => {
                 setIsFetching(false);
-                // Handle error, e.g., display an alert.
+                alertService.showHttpError(err)
             });
     };
     useEffect(() => {
