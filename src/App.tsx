@@ -6,7 +6,7 @@ import Home from './pages/Home.tsx';
 import Store from './pages/Store.tsx';
 import Category from './pages/Category.tsx';
 import 'react-toastify/dist/ReactToastify.css';
-import CheckoutPage from './components/CartItem.tsx.tsx';
+import CheckoutPage from './components/CheckoutPage.tsx';
 
 function App() {
     return (
