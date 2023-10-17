@@ -44,10 +44,10 @@ function CheckoutPage() {
                         <thead>
                         <tr>
                             <th className="product-col">Product</th>
-                            <th>Price</th>
-                            <th>Quantity</th>
+                            <th className="text-lg-center">Price</th>
+                            <th className="text-lg-center">Quantity</th>
                             <th>Subtotal</th>
-                            <th>Action</th>
+                            <th></th>
                         </tr>
                         </thead>
                         <tbody>
@@ -62,10 +62,15 @@ function CheckoutPage() {
                                         </div>
                                     </div>
                                 </td>
-                                <td>${product.price.toFixed(2)}</td>
-                                {cartItems.map((item) => (
-                                    <td>{item.quantity}</td>
-                                ))}
+                                <td className="text-lg-center">${product.price.toFixed(2)}</td>
+                                <td className="text-lg-center">
+                                    {cartItems.map((item) => {
+                                        if (item.id === product.id) {
+                                            return item.quantity;
+                                        }
+                                        return null;
+                                    })}
+                                </td>
                                 <td>${(product.price * product.quantity).toFixed(2)}</td>
                                 <td>
                                     <button
