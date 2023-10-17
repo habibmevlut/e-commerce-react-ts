@@ -2,7 +2,7 @@ export interface IProduct {
     id: number;
     title: string;
     price: number;
-    quantityInStock: number;
+    quantity: number;
     description: string;
     image: string;
     categoryId: number;
@@ -18,7 +18,7 @@ export class Product implements IProduct {
         public id: number,
         public title: string,
         public price: number,
-        public quantityInStock: number,
+        public quantity: number,
         public description: string,
         public image: string,
         public categoryId: number) {

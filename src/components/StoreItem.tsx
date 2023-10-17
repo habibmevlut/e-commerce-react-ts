@@ -2,6 +2,9 @@ import { Button, Card, Form } from "react-bootstrap"; // Import Form from react-
 import { formatCurrency } from "../utilities/formatCurrency";
 import { useShoppingCart } from '../contex/ShoppingCartContext.tsx';
 import { CSSProperties, useState } from 'react';
+import ProductService from '../service/product.service.ts';
+import { ApplicationConfigService } from '../shared/service/application-config.service.ts';
+import AlertService from '../shared/alert/alert.service.tsx';
 
 type StoreItemProps = {
     id: number;
@@ -12,10 +15,11 @@ type StoreItemProps = {
     categoryId: number;
     quantity: number;
 };
-// const productService = new ProductService(new ApplicationConfigService())
-// const alertService = new AlertService();
 
-export function StoreItem({id, title, price, image, quantity, description}: StoreItemProps) {
+export function StoreItem({id, title, price, image, quantity, description, categoryId}: StoreItemProps) {
+    const alertService = new AlertService();
+    const productService = new ProductService(new ApplicationConfigService())
+
     const {
         getItemQuantity,
         increaseCartQuantity,
@@ -41,18 +45,23 @@ export function StoreItem({id, title, price, image, quantity, description}: Stor
     const handleUpdatePrice = () => {
         const updatedProduct = {
             id: id,
+            quantity: quantity,
+            title: title,
+            description: description,
+            image: image,
+            categoryId: categoryId,
             price: newPrice,
         };
-        console.log(updatedProduct)
-        // productService.update(updatedProduct)
-        //     .then((res) => {
-        //             if (res) {
-        //                 alertService.showSuccess("Price updated successfully");
-        //             }
-        //         },
-        //         (error) => {
-        //             alertService.showError(error);
-        //         });
+        productService.update(updatedProduct)
+            .then((res) => {
+                if (res) {
+                    alertService.showSuccess('Product price updated successfully');
+                    window.location.reload();
+                }
+            })
+            .catch((error) => {
+                alertService.showError('An error occurred while updating the product price: ' + error);
+            });
 
         setIsEditingPrice(false);
     }
@@ -92,7 +101,7 @@ export function StoreItem({id, title, price, image, quantity, description}: Stor
                 <div className="mt-auto">
                     {enteredQunantity === 0 ? (
                         <Button className="w-100" onClick={() => increaseCartQuantity(id)}
-                                disabled={quantity === 0}>
+                                disabled={quantity === 0 || isEditingPrice}>
                             + Add To Cart
                         </Button>
                     ) : (

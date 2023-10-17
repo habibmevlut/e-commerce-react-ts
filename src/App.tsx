@@ -5,6 +5,7 @@ import { ShoppingCartProvider } from './contex/ShoppingCartContext.tsx';
 import Home from './pages/Home.tsx';
 import Store from './pages/Store.tsx';
 import Category from './pages/Category.tsx';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
     return (

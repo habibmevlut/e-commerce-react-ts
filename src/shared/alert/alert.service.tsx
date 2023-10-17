@@ -1,39 +1,26 @@
-import Toast from 'react-bootstrap/Toast';
+import { toast } from 'react-toastify';
 
 class AlertService {
-    showError(message: string) {
-        const toastProps = {
-            variant: 'danger',
-            autohide: true,
-            delay: 5000
-        };
-
-        return (
-            <Toast {...toastProps}>
-                <Toast.Header closeButton={false}>
-                    <strong className="mr-auto">Error</strong>
-                </Toast.Header>
-                <Toast.Body>{message}</Toast.Body>
-            </Toast>
-        );
+    showError(errorMessage: string) {
+        toast.error(errorMessage, {
+            position: toast.POSITION.TOP_CENTER,
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+        });
     }
 
     showSuccess(message: string) {
-        const toastProps = {
-            variant: 'success',
-            autohide: true,
-            delay: 5000
-        };
-
-        return (
-            <Toast {...toastProps}>
-                <Toast.Header closeButton={false}>
-                    <strong className="mr-auto">Success</strong>
-                </Toast.Header>
-                <Toast.Body>{message}</Toast.Body>
-            </Toast>
-        );
+        toast.success(message, {
+            position: toast.POSITION.TOP_CENTER,
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+        });
     }
+
 
     showHttpError(httpErrorResponse: any) {
         switch (httpErrorResponse.status) {
@@ -48,6 +35,8 @@ class AlertService {
                     if (entry.toLowerCase().endsWith('app-error')) {
                         errorHeader = httpErrorResponse.headers[entry];
                     } else if (entry.toLowerCase().endsWith('app-params')) {
+                        const paramsHeader = decodeURIComponent(httpErrorResponse.headers[entry]).replace(/\+/g, ' ');
+                        return this.showError(errorHeader + paramsHeader);
                     }
                 }
 

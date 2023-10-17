@@ -54,8 +54,9 @@ class ProductService {
      * Update a product
      * @param entity
      */
-    public update(entity: IProduct): Promise<IProduct> {
-        return axios.put(`${baseApiUrl}/${entity.id}`, entity).then(res => res.data);
+    public async update(entity: IProduct): Promise<IProduct> {
+        const res = await axios.put(`${baseApiUrl}/${entity.id}`, entity);
+        return res.data;
     }
 
     /**
