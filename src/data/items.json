@@ -1,26 +1,236 @@
 [
   {
-    "id": 1,
-    "name": "Book",
-    "price": 10.99,
-    "imgUrl": "/imgs/book.jpg"
+    "id": "1",
+    "title": "Macbook Retina 13.3' ME662 (2013)",
+    "price": 2404,
+    "quantity": 10,
+    "description": "3.0GHz Dual-core Haswell Intel Core i5 Turbo Boost up to 3.2 GHz, 3MB L3 cache 8GB (two 4GB SO-DIMMs) of 1600MHz DDR3 SDRAM",
+    "image": "https://www.dropbox.com/s/swg9bdr0ejcbtrl/img9.jpg?raw=1",
+    "categoryId": "1"
   },
   {
-    "id": 2,
-    "name": "Computer",
-    "price": 1199,
-    "imgUrl": "/imgs/computer.jpg"
+    "id": "2",
+    "title": "Macbook Pro 13.3' Retina MF841LL/A Model 2015 Option Ram Care 12/2016",
+    "price": 1207,
+    "quantity": 15,
+    "description": "Macbook Pro 13.3' Retina MF841LL/A Model 2015 Option Ram Care 12/2016",
+    "image": "https://www.dropbox.com/s/6tqcep7rk29l59e/img2.jpeg?raw=1",
+    "categoryId": "1"
   },
   {
-    "id": 3,
-    "name": "Banana",
-    "price": 1.05,
-    "imgUrl": "/imgs/banana.jpg"
+    "id": "3",
+    "title": "Macbook Pro 15.4' Retina MC975LL/A Model 2012",
+    "price": 1807,
+    "quantity": 1,
+    "description": "3.0GHz Dual-core Haswell Intel Core i5 Turbo Boost up to 3.2 GHz, 3MB L3 cache 8GB (two 4GB SO-DIMMs) of 1600MHz DDR3 SDRAM",
+    "image": "https://www.dropbox.com/s/78fot6w894stu3n/img3.jpg?raw=1",
+    "categoryId": "1"
   },
   {
-    "id": 4,
-    "name": "Car",
-    "price": 14000,
-    "imgUrl": "/imgs/car.jpg"
+    "id": "4",
+    "title": "Retina MacBook Pro 13 inch MF841",
+    "price": 1099,
+    "quantity": 2,
+    "description": "2.9 GHz Dual-Core Intel Core i5 Broadwell Turbo boost up to 3.3 GHz with L3 3MB cache",
+    "image": "https://www.dropbox.com/s/kbuanen8970nin0/img4.jpg?raw=1",
+    "categoryId": "1"
+  },
+  {
+    "id": "5",
+    "title": "MacBook Air 13.3' MJVE2",
+    "price": 656,
+    "quantity": 5,
+    "description": "2.9 GHz Dual-Core Intel Core i5 Broadwell Turbo boost up to 3.3 GHz with L3 3MB cache",
+    "image": "https://www.dropbox.com/s/d45c3pap1h4cu0y/img5.jpg?raw=1",
+    "categoryId": 1
+  },
+  {
+    "id": "6",
+    "title": "Macbook Retina 13.3' ME865LL",
+    "price": 888,
+    "quantity": 4,
+    "description": "2.9 GHz Dual-Core Intel Core i5 Broadwell Turbo boost up to 3.3 GHz with L3 3MB cache",
+    "image": "https://www.dropbox.com/s/rjj1vtdx79xptu0/img6.jpeg?raw=1",
+    "categoryId": 1
+  },
+  {
+    "id": "7",
+    "title": "Macbook Pro 15.4' Retina ME294LL",
+    "price": 1999,
+    "quantity": 0,
+    "description": "2.9 GHz Dual-Core Intel Core i5 Broadwell Turbo boost up to 3.3 GHz with L3 3MB cache",
+    "image": "https://www.dropbox.com/s/miym588nx2lscqt/img7.jpg?raw=1",
+    "categoryId": 1
+  },
+  {
+    "id": "8",
+    "title": "Macbook Pro 13.3' Retina MF841LL",
+    "price": 999.9,
+    "quantity": 100,
+    "description": "2.9 GHz Dual-Core Intel Core i5 Broadwell Turbo boost up to 3.3 GHz with L3 3MB cache",
+    "image": "https://www.dropbox.com/s/wbwqjy22lqjc3jl/img8.jpg?raw=1",
+    "categoryId": 1
+  },
+  {
+    "id": "9",
+    "title": "Samsung Galaxy A34",
+    "price": 1501,
+    "quantity": 30,
+    "description": "Samsung Galaxy A34 128 GB Memory, 8 GB RAM GB 5G Silver",
+    "image": "https://images.samsung.com/is/image/samsung/p6pim/tr/sm-a346ezsetur/gallery/tr-galaxy-a34-5g-sm-a346-sm-a346ezsetur-537623122?$650_519_PNG$",
+    "categoryId": "1"
+  },
+  {
+    "id": "10",
+    "title": "Men's Classic Blue Jeans",
+    "price": "40",
+    "quantity": 50,
+    "description": "Classic blue jeans for men. Available in various sizes and fits.",
+    "image": "https://ae01.alicdn.com/kf/H39e6d1daefde46ce8edbe7260241c409n/2021-yeni-erkek-moda-siyah-mavi-kot-erkekler-rahat-ince-stre-kot-klasik-kot-pantolon-pantolon.jpg_.webp",
+    "categoryId": 2
+  },
+  {
+    "id": "11",
+    "title": "Women's Floral Print Dress",
+    "price": 49.99,
+    "quantity": 20,
+    "description": "Floral print dress for women. Perfect for casual or semi-formal occasions.",
+    "image": "https://ae01.alicdn.com/kf/S4d76111e52d2450d8933098ecb2187cc3/Women-s-Round-Neck-Floral-Print-Dress-Vintage-Short-Sleeve-Party-Dresses-Summer-Casual-Midi-Dress.jpg_.webp",
+    "categoryId": 2
+  },
+  {
+    "id": "12",
+    "title": "Men's Sports Jacket",
+    "price": 79.99,
+    "quantity": 15,
+    "description": "Stylish sports jacket for men. Ideal for active lifestyles.",
+    "image": "https://robbiebrown.ca/wp-content/uploads/jack-victor-sport-jacket-fall-2016.jpg",
+    "categoryId": 2
+  },
+  {
+    "id": "13",
+    "title": "Women's Leather Handbag",
+    "price": 59.99,
+    "quantity": 30,
+    "description": "Elegant leather handbag for women. A perfect accessory for any outfit.",
+    "image": "https://media.istockphoto.com/id/623536474/tr/foto%C4%9Fraf/elegant-women-beige-bag-rear-view.jpg?s=612x612&w=0&k=20&c=koRPwfnJJr9u87ULq-v-oJf5GUGB6JjvNFkNkYtu1ac=",
+    "categoryId": 2
+  },
+  {
+    "id": "14",
+    "title": "Men's Casual Sneakers",
+    "price": 29.99,
+    "quantity": 40,
+    "description": "Comfortable and stylish casual sneakers for men.",
+    "image": "https://img.shopstyle-cdn.com/sim/ce/62/ce62658b20331ba913f7062b585c7d1c_best/b52-bu-bullboxer-b52-by-bullboxer-faux-leather-mid-top-sneaker.jpg",
+    "categoryId": 2
+  },
+  {
+    "id": "15",
+    "title": "Women's Winter Coat",
+    "price": 89.99,
+    "quantity": 10,
+    "description": "Warm and fashionable winter coat for women. Stay cozy in style.",
+    "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQD5l_6kV6pnwUE6u1NN_CD6BbO6zOoU0R07OX-zZWzR5c_PjgcQMa3Kno2F9NNy4C5k3lq6bU05K5RYHHnh3vnk5Cy1o3D9NIicpx0XkWA&usqp=CAE",
+    "categoryId": 2
+  },
+  {
+    "id": "16",
+    "title": "Men's Plaid Shirt",
+    "price": 34.99,
+    "quantity": 25,
+    "description": "Classic plaid shirt for men. Available in multiple color options.",
+    "image": "https://img.fruugo.com/product/4/60/362735604_max.jpg",
+    "categoryId": 2
+  },
+  {
+    "id": "17",
+    "title": "Women's Yoga Leggings",
+    "price": 24.99,
+    "quantity": 35,
+    "description": "High-quality yoga leggings for women. Perfect for workouts or casual wear.",
+    "image": "https://m.media-amazon.com/images/I/61prqPehWSL._AC_UY350_.jpg",
+    "categoryId": 2
+  },
+  {
+    "id": "18",
+    "title": "Men's Leather Wallet",
+    "price": 19.99,
+    "quantity": 60,
+    "description": "Genuine leather wallet for men. Stylish and functional.",
+    "image": "https://leonadem.com/cdn/shop/products/8_19024159-c864-4b61-84d1-1f92d17bfd49_1024x1024.jpg?v=1641282631",
+    "categoryId": 2
+  },
+  {
+    "id": "19",
+    "title": "Outdoor Patio Furniture Set",
+    "price": 699.99,
+    "quantity": 10,
+    "description": "Complete outdoor patio furniture set with a table, chairs, and cushions.",
+    "image": "https://www.yalihome.com/wp-content/uploads/2023/02/yalihome-n-ayak-cayseti-3.jpg",
+    "categoryId": "3"
+  },
+  {
+    "id": "20",
+    "title": "Indoor Potted Plant - Fiddle Leaf Fig",
+    "price": 39.99,
+    "quantity": 20,
+    "description": "Beautiful indoor potted plant - Fiddle Leaf Fig. Adds a touch of nature to your home.",
+    "image": "https://m.media-amazon.com/images/I/81HlvhmWC0L._AC_SX679_.jpg",
+    "categoryId": "3"
+  },
+  {
+    "id": "21",
+    "title": "Smart Thermostat with Wi-Fi Control",
+    "price": 129.99,
+    "quantity": 15,
+    "description": "Smart thermostat for home heating and cooling. Control it remotely via Wi-Fi.",
+    "image": "https://m.media-amazon.com/images/I/517VIYMzDTL._AC_SY879_.jpg",
+    "categoryId": "3"
+  },
+  {
+    "id": "22",
+    "title": "Solar-Powered Outdoor LED Lights",
+    "price": 29.99,
+    "quantity": 30,
+    "description": "Set of solar-powered outdoor LED lights. Illuminate your garden with renewable energy.",
+    "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQNnW30tj2GKLms78WgFmftepY1R_exPuHCwf2Ql9zP7f_sWGkCAexnwsWbhNH3gYlIoDwf4FpgiepCfm8hcvNNNXDO-C8EGE33LkWVkp04s14GYRAvSxWZRg&usqp=CAE",
+    "categoryId": "3"
+  },
+  {
+    "id": "23",
+    "title": "Stainless Steel Kitchen Knife Set",
+    "price": 49.99,
+    "quantity": 25,
+    "description": "High-quality stainless steel kitchen knife set. Includes a variety of knives for all your culinary needs.",
+    "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcT4AQL2M4Rvxva9X_B5zcLvlqBxFZNILFUUlFFeGv9u39SjG2KvL8a1A-n-6e10ECRSeH20hrT0l1uhW5JPuhMfoJYHzCvSmv8e80U71BTDaBum2xMi9ovGXg&usqp=CAE",
+    "categoryId": "3"
+  },
+  {
+    "id": "24",
+    "title": "Camping Tent - 4 Person",
+    "price": 149.99,
+    "quantity": 8,
+    "description": "Spacious 4-person camping tent with waterproof design. Ideal for outdoor adventures.",
+    "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTl-h9OQ4IxeEwhN74LlnxrNdHq5eseBD6ObiTphpBODzS7fRrWCJ-F6FEhtvTJs-goJkA8SMlY8lIDlKfei7aSOLee8i1bABbz5PGPycqw&usqp=CAE",
+    "categoryId": "4"
+  },
+  {
+    "id": "25",
+    "title": "Mountain Bike - 27.5 inch",
+    "price": 349.99,
+    "quantity": 12,
+    "description": "Durable mountain bike with a 27.5-inch frame. Perfect for off-road cycling.",
+    "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRFaozu8NNSYXbT-RmQX1aFXaKmPnjeTPfi7n9WqSI6P0M1UvmAe2eMoYMkxupXl-GuxtsimrgekaIYtk19qayesM6pfmXXgcUPsPj5v_kMiUBlFXcZQwh2Lg&usqp=CAE",
+    "categoryId": "4"
+  },
+  {
+    "id": "26",
+    "title": "Fitness Tracker Watch",
+    "price": 79.99,
+    "quantity": 20,
+    "description": "Advanced fitness tracker watch with heart rate monitoring and GPS. Stay active and monitor your progress.",
+    "image": "https://m.media-amazon.com/images/I/71a7e52ORSL._AC_SX679_.jpg",
+    "categoryId": "4"
   }
 ]
